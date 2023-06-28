@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const { v4: uuid } = require("uuid");
 const stripe = require("stripe")(process.env.STRIPE_KEY);
-const { Checkout } = require("../models/Index");
+const { Checkout } = require("../models");
 const getuser = require("../middlewares/getUser");
 
 router.get("/", (req, res) => {
